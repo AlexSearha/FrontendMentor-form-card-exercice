@@ -5,6 +5,8 @@
 
 :root{
     --card-numbers: #ffffff;
+    --form-color-text: #220930;
+    --confirm-form-text: #ffffff;
 }
 
 html {
@@ -23,6 +25,7 @@ html {
     display: flex;
 }
 
+/*CONTAINER LEFT + CARDS*/
 .container-left {
     background-image: url(/images/bg-main-desktop.png);
     background-repeat: no-repeat;
@@ -62,21 +65,102 @@ html {
     height: 245px;
     width: 445px;
     border-radius: 15px;
-
+    margin-left: 80px;
+    position: relative;
 }
 
 .id-numbers-infos {
     display: flex;
     flex-direction: column;
     gap: 2.5rem;
-    margin-top: 105px;
+    margin-top: 100px;
 }
 .card-numbers{
-    font-size: 3rem;
+    font-size: 3.3rem;
     font-weight: bold;
+    letter-spacing: 0.3rem;
 }
 
 .name-expiration-infos {
     display: flex;
     justify-content: space-between;
 }
+
+.numbers-verso-card {
+    position: absolute;
+    top: 110px;
+    right: 56px;
+    color: var(--card-numbers);
+    font-size: 2.2rem;
+}
+
+/*CONTAINER RIGHT + FORM*/
+input {
+    width: 100%;
+    height: 40px;
+    color: var(--form-color-text);
+    border-radius: 8px;
+    padding: 0.5rem 1.2rem;
+    margin-bottom: 1.8rem;
+}
+
+form {
+    max-width: 60%;
+    padding-left: 10rem;
+}
+
+.container-right {
+    width: 66vw;
+    height: 100vh;
+    color: var(--card-numbers);
+    font-size: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.fulfill-card label {
+    display: block;
+    margin-bottom: 0.8rem;
+    font-size: 1.6rem;
+    color: var(--form-color-text);
+}
+
+.exp-cvc-div {
+    display: flex;
+}
+
+.exp-date-div {
+    width: 35%;
+}
+
+.cvc-div {
+    width: 65%;
+}
+
+.inputs-exp-date {
+    display: flex;
+    width: 80%;
+    gap: 0.5rem;
+}
+
+.form-submit {
+    background-color: var(--form-color-text);
+    color: var(--confirm-form-text);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
