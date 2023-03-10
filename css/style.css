@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Rokkitt:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
+
+:root{
+    --card-numbers: #ffffff;
+}
+
+html {
+    font-size: 62.5%;
+    font-family: 'Rokkitt', serif;
+}
+
+.body {
+    font-size: 1.5rem;
+    display: flex;
+    width: 100%;
+    height: 100vh;
+}
+
+.main {
+    display: flex;
+}
+
+.container-left {
+    background-image: url(/images/bg-main-desktop.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 33vw;
+    height: 100vh;
+    color: var(--card-numbers);
+    font-size: 2rem;
+}
+.container-cards {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+    gap: 5rem;
+    position: absolute;
+    left: 11vw;
+}
+
+.card-recto {
+    background-image: url(/images/bg-card-front.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 245px;
+    width: 445px;
+    border-radius: 15px;
+    padding: 3rem;
+}
+
+.card-verso {
+    background-image: url(/images/bg-card-back.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 245px;
+    width: 445px;
+    border-radius: 15px;
+
+}
+
+.id-numbers-infos {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+    margin-top: 105px;
+}
+.card-numbers{
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+.name-expiration-infos {
+    display: flex;
+    justify-content: space-between;
+}
