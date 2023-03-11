@@ -73,7 +73,7 @@ html {
     display: flex;
     flex-direction: column;
     gap: 2.5rem;
-    margin-top: 100px;
+    margin-top: 70px;
 }
 .card-numbers{
     font-size: 3.3rem;
@@ -150,9 +150,26 @@ form {
     color: var(--confirm-form-text);
 }
 
+.circle-one {
+    width: 4.8rem;
+    height: 4.8rem;
+    border: 1px solid #fff;
+    border-radius: 30px;
+    background-color: #fff;
+}
 
+.circle-two {
+    width: 2.2rem;
+    height: 2.2rem;
+    border: 1px solid #fff;
+    border-radius: 30px;
+}
 
-
+.cercles-card {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem
+}
 
 
 

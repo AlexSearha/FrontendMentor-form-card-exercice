@@ -17,9 +17,9 @@
     <div class="container-left">
       <div class="container-cards">
         <div class="card-recto">
-          <div class="cercles-card">Cercles</div>
+          <div class="cercles-card"></div>
           <div class="id-numbers-infos">  
-            <div class="card-numbers">9591 6489 6389 101E</div>
+            <div id="cardNumbers" class="card-numbers">9591 6489 6389 101E</div>
             <div class="name-expiration-infos">
               <span id="nameCard" class="name-card">FELICIA LEIRE</span>
               <span id="expirationCard" class="expiration">09/00</span>
@@ -34,27 +34,27 @@
 
     <div class="container-right">
       
-      <form method="post" action="" class="fulfill-card">
+      <form id="form" method="post" action="" class="fulfill-card">
         <div>
-          <label for="">CARDHOLDER NAME</label>
-          <input name="" type="text" placeholder="ex: Mathier DURAND">
+          <label for="cardholderName">CARDHOLDER NAME</label>
+          <input name="cardholderName" id="cardholderName" type="text" placeholder="ex: Mathieu DURAND">
         </div>
         <div>
-          <label for="">CARD NUMBER</label>
-          <input type="text" placeholder="XXXX XXXX XXXX XXXX">
+          <label for="cardNumber">CARD NUMBER</label>
+          <input name="cardNumber" id="cardNumber" type="text" placeholder="XXXX XXXX XXXX XXXX">
         </div>
 
         <div class="exp-cvc-div">
           <div class="exp-date-div">
-            <label for="">EXP. DATE (MM/YY)</label>
+            <label for="expDate">EXP. DATE (MM/YY)</label>
             <div class="inputs-exp-date">
-              <input type="text" name="" id="">
-              <input type="text">
+              <input type="text" name="expDate" id="expDate" placeholder="MM">
+              <input type="text" id ="expDate" placeholder="YY">
             </div>
           </div>
           <div class="cvc-div">
-            <label for="">CVC</label>
-            <input type="text">
+            <label for="cvcCode">CVC</label>
+            <input type="text" id="cvcCode" name="cvcCode" placeholder="e.g. 123">
           </div>
         </div>
         <input class="form-submit" type="submit" value="Confirm">
@@ -94,5 +94,6 @@
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
     Coded by <a href="#">Your Name Here</a>.
   </div> -->
+  <script src="js/form.js"></script>
 </body>
 </html>
