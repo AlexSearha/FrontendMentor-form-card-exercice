@@ -141,8 +141,20 @@ form {
 
 .inputs-exp-date {
     display: flex;
-    width: 80%;
+    flex-wrap: wrap;
+    width: 90%;
     gap: 0.5rem;
+}
+
+#expMonth, #expYear {
+    width: 45%;
+}
+
+#errorType {
+    width: 90%;
+    color: red;
+    margin: -1.5rem 0 2rem 0;
+    font-size: 1.5rem;
 }
 
 .form-submit {
@@ -171,13 +183,45 @@ form {
     gap: 1.5rem
 }
 
+/*---------------------------------*/
+/*----------MOBILE VERSION---------*/
+/*---------------------------------*/
 
+@media (max-width: 480px) {
 
+.main {
+    flex-direction: column;
+}
 
+.container-left {
+    width: 100vw;
+    height: 75%;
+}
 
+.container-cards {
+    gap: 0;
+    flex-direction: column-reverse;
+    justify-content: flex-end;
+    /* height: 80%; */
+    left: 0;
+}
 
+.card-verso {
+    margin: 10% 0 0 5%;
+}
 
+.card-recto {
+    margin: -24% 0 0 2%;
+    z-index: 1;
+}
 
+.container-right {
+    width: 100vw;
+}
 
+form {
+    max-width: 85%;
+    padding-left: 0;
+}
 
-
+}

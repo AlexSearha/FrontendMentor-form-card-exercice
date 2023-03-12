@@ -38,23 +38,37 @@ const app = {
       const expirationCardMonthElement = document.getElementById('expirationCardMonth');
       const expirationCardYearElement = document.getElementById('expirationCardYear');
 
+      const inputsexpdateElement = document.querySelector('.inputs-exp-date');
       const expMonthElement = document.getElementById('expMonth');
-      expMonthElement.addEventListener('input', () => {
-        if(expMonthElement.value === ''){
-          expirationCardMonthElement.textContent = "XX";
-        }else{
-          expirationCardMonthElement.textContent = expMonthElement.value;
-        }
-      });
+        expMonthElement.addEventListener('input', () => {
+          if(expMonthElement.value === ''){
+            expirationCardMonthElement.textContent = "XX";
+          }else{
+            if(expMonthElement.value > 12){
+              expMonthElement.value = '';
+              expirationCardMonthElement.textContent = "XX";
+              expMonthElement.style.borderColor = "red";
+
+              const createDivInfoError = document.createElement('div');
+              createDivInfoError.id = "errorType";
+              createDivInfoError.textContent = "Valid value please";
+              inputsexpdateElement.append(createDivInfoError);
+
+            }else{
+              expirationCardMonthElement.textContent = expMonthElement.value;
+              document.getElementById('errorType').remove();
+            }
+          }
+        });
 
       const expYearElement = document.getElementById('expYear');
-      expYearElement.addEventListener('input', () => {
-        if(expYearElement.value === ''){
-          expirationCardYearElement.textContent = "XX";
-        }else{
-          expirationCardYearElement.textContent = expYearElement.value;
-        }
-      });
+        expYearElement.addEventListener('input', () => {
+          if(expYearElement.value === ''){
+            expirationCardYearElement.textContent = "XX";
+          }else{
+            expirationCardYearElement.textContent = expYearElement.value;
+          }
+        });
 
     },
 
@@ -76,9 +90,13 @@ const app = {
       const cardNumbersElement = document.getElementById('cardNumbers');
 
       const cardNumberInputElement = document.getElementById('cardNumberInput');
-      cardNumberInputElement.addEventListener('input', () => {
-        cardNumbersElement.textContent = cardNumberInputElement.value;
-      });
+        cardNumberInputElement.addEventListener('input', () => {
+          if(cardNumberInputElement.value === ''){
+            cardNumbersElement.textContent = "0000 0000 0000 0000";
+          }else{
+            cardNumbersElement.textContent = cardNumberInputElement.value;
+          }
+        });
 
     },
 
