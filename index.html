@@ -21,8 +21,12 @@
           <div class="id-numbers-infos">  
             <div id="cardNumbers" class="card-numbers">9591 6489 6389 101E</div>
             <div class="name-expiration-infos">
-              <span id="nameCard" class="name-card">FELICIA LEIRE</span>
-              <span id="expirationCard" class="expiration">09/00</span>
+              <span id="nameCard" class="name-card"></span>
+              <div class="expirationCard">
+                <span id="expirationCardMonth">09</span>
+                <span>/</span>
+                <span id="expirationCardYear">24</span>
+              </div>
             </div>
           </div>
         </div>
@@ -34,22 +38,22 @@
 
     <div class="container-right">
       
-      <form id="form" method="post" action="" class="fulfill-card">
+      <form id="form" action="" class="fulfill-card">
         <div>
           <label for="cardholderName">CARDHOLDER NAME</label>
           <input name="cardholderName" id="cardholderName" type="text" placeholder="ex: Mathieu DURAND">
         </div>
         <div>
           <label for="cardNumber">CARD NUMBER</label>
-          <input name="cardNumber" id="cardNumber" type="text" placeholder="XXXX XXXX XXXX XXXX">
+          <input name="cardNumber" id="cardNumberInput" type="text" placeholder="XXXX XXXX XXXX XXXX">
         </div>
 
         <div class="exp-cvc-div">
           <div class="exp-date-div">
             <label for="expDate">EXP. DATE (MM/YY)</label>
             <div class="inputs-exp-date">
-              <input type="text" name="expDate" id="expDate" placeholder="MM">
-              <input type="text" id ="expDate" placeholder="YY">
+              <input type="text" name="expDate" id="expMonth" placeholder="MM">
+              <input type="text" id ="expYear" placeholder="YY">
             </div>
           </div>
           <div class="cvc-div">
